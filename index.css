@@ -1,0 +1,16 @@
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.main-container {
+    height: 100%;
+    gap: 2rem;
+}
+
+#form {
+    gap: 2rem;
+}
