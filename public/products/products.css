@@ -1,0 +1,49 @@
+main {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    gap: 2rem;
+}
+
+#query, #id {
+    width: 80%;
+    padding: 1rem;
+}
+
+.search {
+    width: 6rem;
+    height: 3rem;
+}
+
+#results-query, #result-id {
+    gap: 4rem;
+    width: 100%;
+}
+
+.product-container {
+    gap: 1rem;
+    width: 100%;
+}
+
+.product-field {
+    width: 60%;
+    justify-content: space-between;
+}
+
+.product-value {
+    padding: 1rem;
+    text-align: center;
+}
+
+.button-update {
+    width: 12rem;
+    padding: 1rem;
+}
+
+.product-value-edition {
+    border: 2px var(--GREEN) solid;
+}

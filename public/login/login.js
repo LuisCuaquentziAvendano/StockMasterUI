@@ -1,32 +1,52 @@
 let isLogin = true;
+localStorage.clear();
 setVisibleElements();
 
-document.getElementById('toRegister')
-.addEventListener('click', (event) => {
+function toRegister(event) {
     event.preventDefault();
     isLogin = false;
     setVisibleElements();
-});
+};
 
-document.getElementById('toLogin')
-.addEventListener('click', (event) => {
+function toLogin(event) {
     event.preventDefault();
     isLogin = true;
     setVisibleElements();
-});
+};
 
-document.getElementById('form')
-.addEventListener('submit', (event) => {
+function sendForm(event) {
     event.preventDefault();
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    if (isLogin) {
-        request(() => {alert('logged')}, 'POST', 'users/login', {}, { email, password });
-    } else {
-        request(() => {alert('registered')}, 'POST', 'users/register', {}, { name, email, password });
+    const confirmPassword = document.getElementById('confirm-password').value;
+    if (!isLogin && password != confirmPassword) {
+        alert('The passwords don\'t match');
+        return;
     }
-});
+    if (isLogin) {
+        request(
+            (data) => {
+                const { authorization } = data;
+                localStorage.setItem('authorization', `Bearer ${authorization}`);
+                window.location.href = '/inventories';
+            },
+            'POST',
+            'users/login',
+            { email, password }
+        );
+    } else {
+        request(
+            () => {
+                isLogin = true;
+                document.getElementById('login').click();
+            },
+            'POST',
+            'users/register',
+            { name, email, password }
+        );
+    }
+};
 
 function setVisibleElements() {
     const toHide = isLogin ? 'register' : 'login';

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Master</title>
+    <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="products.css">
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <main class="flex-vertical">
+        <h1>Products</h1>
+        <h2>Search a product by ID</h2>
+        <form class="flex-horizontal" onsubmit="searchProductId(event)">
+            <input id="id" type="text" placeholder="Enter the ID">
+            <button class="search" type="submit">Search</button>
+        </form>
+        <div class="flex-vertical" id="result-id"></div>
+        <br>
+
+        <h2>Search products by query</h2>
+        <form class="flex-horizontal" onsubmit="searchProducts(event)">
+            <input id="query" type="text" placeholder="Enter the query">
+            <button class="search" type="submit">Search</button>
+        </form>
+        <div class="flex-vertical" id="results-query"></div>
+        <br>
+    </main>
+    <script src="./../main.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>

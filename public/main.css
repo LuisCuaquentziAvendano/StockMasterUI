@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 :root {
-    --BLACK_BACKGROUND: #020409;
-    --BLACK_CARD: #151b23;
+    --BLACK_DARK: #020409;
+    --BLACK_LIGHT: #151b23;
     --GRAY: #9198a1;
     --BLUE_DARK: #131d2f;
     --BLUE_NORMAL: #3984ea;
@@ -18,7 +18,7 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: var(--BLACK_BACKGROUND);
+    background-color: transparent;
     color: white;
 }
 
@@ -26,27 +26,33 @@ html {
     width: 100vw;
     height: 100vh;
     font-family: "Lexend", sans-serif;
+    background-color: var(--BLACK_DARK);
+}
+
+select {
+    font-size: medium;
+}
+
+option {
+    color: black;
+}
+
+button {
+    border-radius: 0.5rem;
+    font-size: medium;
+    background-color: var(--GREEN);
+    border: 0;
+    cursor: pointer;
 }
 
 input {
-    font-size: medium;
-    padding: 0.5rem;
-    width: 20rem;
-    border: 1.5px white solid;
     border-radius: 0.5rem;
+    font-size: medium;
+    border: 1.5px white solid;
 }
 
 input::placeholder {
     color: var(--GRAY);
-}
-
-button {
-    font-size: medium;
-    padding: 0.5rem 1rem;
-    background-color: var(--GREEN);
-    border: 0;
-    border-radius: 0.3rem;
-    cursor: pointer;
 }
 
 .flex-vertical {
@@ -54,6 +60,7 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .flex-horizontal {
@@ -61,4 +68,17 @@ button {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav {
+    width: 100%;
+    background-color: var(--BLUE_NORMAL);
+    height: 4rem;
+}
+
+.navbar-container {
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 100%;
 }

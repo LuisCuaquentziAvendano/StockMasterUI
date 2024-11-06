@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Master</title>
+    <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="inventories.css">
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <main class="flex-vertical">
+        <h1>Inventories</h1>
+        <div class="flex-horizontal" id="inventories"></div>
+        <div class="flex-horizontal create-inventory">
+            <input id="name" type="text" placeholder="New inventory's name">
+            <button onclick="createInventory()">Create inventory</button>
+        </div>
+    </main>
+    <script src="./../main.js"></script>
+    <script src="inventories.js"></script>
+</body>
+</html>

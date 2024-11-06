@@ -1,0 +1,23 @@
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+body {
+    height: 100%;
+    gap: 2rem;
+}
+
+form {
+    gap: 2rem;
+}
+
+input, button {
+    box-sizing: border-box;
+    width: 22rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+}

@@ -1,0 +1,42 @@
+.inventory-card {
+    background-color: var(--BLACK_LIGHT);
+    padding: 1rem;
+    width: 10rem;
+    align-items: flex-start;
+    gap: 1rem;
+    border: 1px var(--GRAY) solid;
+    border-radius: 0.5rem;
+}
+
+.inventory-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+main {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+#inventories {
+    gap: 5rem;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+}
+
+input {
+    width: 20rem;
+    height: 3rem;
+    padding: 0 1rem;
+}
+
+.create-inventory {
+    gap: 2rem;
+}
+
+.inventory-button {
+    width: 100%;
+}

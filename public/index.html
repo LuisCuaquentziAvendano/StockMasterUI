@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Master</title>
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./login/login.css">
 </head>
-<body class="flex-vertical main-container">
+<body class="flex-vertical">
     <h1>Welcome to Stock Master</h1>
-    <form class="flex-vertical" id="form">
+    <form class="flex-vertical" onsubmit="sendForm(event)">
         <input class="register" type="text" id="name" placeholder="Name">
         <input class="login register" type="text" id="email" placeholder="Email">
         <input class="login register" type="password" id="password" placeholder="Password">
-        <button class="login" type="submit">Login</button>
+        <input class="register" type="password" id="confirm-password" placeholder="Confirm the password">
+
+        <button class="login" type="submit" id="login">Login</button>
         <button class="register" type="submit">Register</button>
-        <a href="" class="login" id="toRegister">Don't you have an account? Register here</a>
-        <a href="" class="register" id="toLogin">Do you have an account? Login here</a>
+
+        <a href="" class="login" onclick="toRegister(event)">Don't you have an account? Register here</a>
+        <a href="" class="register" onclick="toLogin(event)">Do you have an account? Login here</a>
     </form>
     <script src="main.js"></script>
-    <script src="index.js"></script>
+    <script src="./login/login.js"></script>
 </body>
 </html>

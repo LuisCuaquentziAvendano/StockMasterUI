@@ -1,0 +1,96 @@
+main {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+#inventory {
+    width: 100%;
+    gap: 2rem;
+}
+
+#inventory-data {
+    gap: 1rem;
+}
+
+#inventory-data div {
+    gap: 3rem;
+}
+
+select {
+    height: 2.5rem;
+}
+
+input {
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0 1rem;
+}
+
+input:disabled {
+    border: 0;
+}
+
+#inventory-fields, #permissions {
+    width: 100%;
+}
+
+table {
+    width: 80%;
+}
+
+thead, tbody {
+    width: 100%;
+}
+
+th, td {
+    width: 25%;
+    height: 3rem;
+    text-align: center;
+}
+
+.field-data {
+    box-sizing: border-box;
+    width: 100%;
+    border: 0;
+    text-align: center;
+}
+
+button {
+    width: 5rem;
+    height: 2rem;
+}
+
+.save-action {
+    background-color: var(--BLUE_NORMAL);
+}
+
+.cancel-action {
+    background-color: var(--RED_LIGHT);
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+.edit-input {
+    border: 1px white solid;
+}
+
+.create-field {
+    width: 10rem;
+}
+
+.dange-button {
+    width: 10rem;
+    background-color: var(--RED_DARK);
+}
+
+.warning-button {
+    width: 10rem;
+    background-color: var(--YELLOW);
+    color: black;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Master</title>
+    <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="inventory.css">
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <main class="flex-vertical">
+        <h1>Inventory</h1>
+        <h2>General data</h2>
+        <div class="flex-vertical" id="inventory-data"></div>
+        <br>
+        <h2>Update fields</h2>
+        <div class="flex-vertical" id="inventory-fields"></div>
+        <br>
+
+        <h2>Create fields</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Field name</th>
+                    <th>Data type</th>
+                    <th>Visible</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <input id="create-field-field" type="text">
+                    </th>
+                    <th>
+                        <select id="create-field-type" >
+                            <option value="integer">integer</option>
+                            <option value="float">float</option>
+                            <option value="string">string</option>
+                            <option value="boolean">boolean</option>
+                            <option value="datetime">datetime</option>
+                            <option value="array">array of strings</option>
+                            <option value="image">image</option>
+                        </select>
+                    </th>
+                    <th>
+                        <select id="create-field-visible" >
+                            <option value="true">true</option>
+                            <option value="false">false</option>
+                        </select>
+                    </th>
+                    <th>
+                        <button class="create-field" onclick="createField()">Create field</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <h2>Modify permissions</h2>
+        <div class="flex-vertical" id="permissions"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <input id="permission-email" type="text">
+                    </th>
+                    <th>
+                        <select id="permission-role" >
+                            <option value="stock">stock</option>
+                            <option value="query">query</option>
+                            <option value="none">none</option>
+                        </select>
+                    </th>
+                    <th>
+                        <button class="warning-button" onclick="modifyPermission()">Modify role</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <h2>Delete fields</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Field name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        <input id="delete-field-field" type="text">
+                    </th>
+                    <th>
+                        <button class="dange-button" onclick="deleteField()">Delete field</button>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+
+        <h2>Delete the inventory</h2>
+        <button class="dange-button" onclick="deleteInventory()">Delete inventory</button>
+        <br>
+    </main>
+    <script src="./../main.js"></script>
+    <script src="inventory.js"></script>
+</body>
+</html>
