@@ -19,18 +19,20 @@ form {
     height: 3rem;
 }
 
-#results-query, #result-id {
+#results-query, #result-id, #create-product {
     gap: 4rem;
     width: 100%;
 }
 
 .product-container {
-    gap: 1rem;
-    width: 100%;
+    gap: 0.5rem;
+    width: 60%;
+    padding: 2rem;
+    border: 2px white solid;
 }
 
 .product-field {
-    width: 60%;
+    width: 100%;
     justify-content: space-between;
 }
 
@@ -39,11 +41,48 @@ form {
     text-align: center;
 }
 
-.button-update {
+.button {
     width: 12rem;
     padding: 1rem;
 }
 
+.product-image {
+    width: 100%;
+}
+
+.input-file {
+    width: 50%;
+}
+
+.product-image-container {
+    width: 50%;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.save-button {
+    background-color: var(--BLUE_NORMAL);
+}
+
+.array-textarea {
+    width: 40%;
+    height: 10rem;
+    padding: 1rem;
+    border: 1px white solid;
+}
+
 .product-value-edition {
     border: 2px var(--GREEN) solid;
+}
+
+hr {
+    height: 1rem;
+    width: 100%;
+    background-color: var(--BLUE_LIGHT);
+}
+
+.danger-button {
+    background-color: var(--RED_DARK);
 }

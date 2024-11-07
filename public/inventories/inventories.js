@@ -30,7 +30,14 @@ function goToInventory(inventoryId) {
 
 function goToProducts(inventoryId) {
     localStorage.setItem('inventory', inventoryId);
-    window.location.href = '/products';
+    request(
+        (inventory) => {
+            localStorage.setItem('fields', JSON.stringify(inventory.fields));
+            window.location.href = '/products';
+        },
+        'GET',
+        'inventories/getInventory'
+    );
 }
 
 function createInventory() {

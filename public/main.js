@@ -16,14 +16,17 @@ function request(callback, method, route, body={}, isFormData=false) {
     const options = {};
     if (method != 'GET') {
         if (isFormData) {
-            headers['Content-Type'] = 'application/x-www-form-urlencoded';
+            options.body = body;
         } else {
             headers['Content-Type'] = 'application/json';
+            options.body = isFormData ? body : JSON.stringify(body);
         }
-        options.body = isFormData ? body : JSON.stringify(body);
     }
     options.method = method;
     options.headers = headers;
+    if (!callback) {
+        return fetch(`${API_URL}${route.replace(/^\//, '')}`, options);
+    }
     fetch(`${API_URL}${route.replace(/^\//, '')}`, options)
     .then(response => {
         if (response.status in HTTP_STATUS) {
@@ -34,18 +37,14 @@ function request(callback, method, route, body={}, isFormData=false) {
         if (contentType && contentType.includes('application/json')) {
             return Promise.all([response, response.json()]);
         }
-        return Promise.all([response, undefined]);
+        return Promise.all([response, response]);
     }).then(([response, data]) => {
         if (data && data.error) {
             alert(data.error);
         } else if (response.ok) {
-            callback(data);
+            return callback(data);
         } else {
             alert(`Status: ${response.status}, data: ${data}`);
-        }
-    }).catch(error => {
-        if (error.message != '') {
-            alert(error.message);
         }
     });
 }

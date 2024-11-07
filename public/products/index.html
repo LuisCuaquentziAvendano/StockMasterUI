@@ -11,13 +11,14 @@
     <nav id="navbar"></nav>
     <main class="flex-vertical">
         <h1>Products</h1>
-        <h2>Search a product by ID</h2>
+        <h2>Search, edit and delete a product</h2>
         <form class="flex-horizontal" onsubmit="searchProductId(event)">
             <input id="id" type="text" placeholder="Enter the ID">
             <button class="search" type="submit">Search</button>
         </form>
         <div class="flex-vertical" id="result-id"></div>
         <br>
+        <hr>
 
         <h2>Search products by query</h2>
         <form class="flex-horizontal" onsubmit="searchProducts(event)">
@@ -25,6 +26,11 @@
             <button class="search" type="submit">Search</button>
         </form>
         <div class="flex-vertical" id="results-query"></div>
+        <br>
+        <hr>
+
+        <h2>Create a product</h2>
+        <div class="flex-vertical" id="create-product"></div>
         <br>
     </main>
     <script src="./../main.js"></script>
