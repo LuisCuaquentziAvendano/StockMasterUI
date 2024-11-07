@@ -40,3 +40,7 @@ input {
 .inventory-button {
     width: 100%;
 }
+
+.special-function {
+    background-color: var(--PURPLE);
+}

@@ -54,7 +54,7 @@ function renderProducts(results) {
             <div>
                 <p>Page ${results.currentPage + 1}/${results.lastPage + 1}</p>
                 <br>
-                <p>Total products: ${results.totalProducts}</p>
+                <p>Total products found: ${results.totalProducts}</p>
             </div>
             ${html.join('')}`;
     });
@@ -202,7 +202,7 @@ function renderText(productF={}, field, sectionId) {
     const value = productF[field];
     return /*html*/`<input class="product-value"
                             type="text"
-                            value="${value || ''}"
+                            value="${[undefined, null].includes(value) ? '' : value}"
                             id="${sectionId}-${field}"
                             disabled
                             placeholder="${inventoryF[field].type}"

@@ -1,4 +1,4 @@
-const API_URL = 'https://stockmaster-xvke.onrender.com/api/';
+const API_URL = 'http://localhost:3001/api/'//'https://stockmaster-xvke.onrender.com/api/';
 const HTTP_STATUS = {
     401: 'Unauthorized',
     403: 'Forbidden',

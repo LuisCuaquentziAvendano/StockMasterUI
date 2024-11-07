@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Master</title>
+    <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <main class="flex-vertical">
+        <div class="flex-horizontal space">
+            <p><b>Name:</b></p>
+            <p id="name"></p>
+        </div>
+        <div class="flex-horizontal space">
+            <p><b>Email:</b></p>
+            <p id="email"></p>
+        </div>
+        <div class="flex-horizontal space">
+            <p><b>Token:</b></p>
+            <p id="token"></p>
+        </div>
+
+        <div class="flex-horizontal space">
+            <input id="new-name" type="text" placeholder="Enter your name">
+            <button onclick="updateData()">Update the name</button>
+        </div>
+
+        <button onclick="generateNewToken()">Generate a new token</button>
+
+        <div class="flex-horizontal space">
+            <input id="new-password" type="password" placeholder="New password">
+            <input id="confirm-new-password" type="password" placeholder="Confirm the new password">
+            <button class="warning-button" onclick="updatePassword()">Update the password</button>
+        </div>
+
+        <button class="danger-button" onclick="deleteAccount()">Delete my account</button>
+        <br>
+    </main>
+    <script src="./../main.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
