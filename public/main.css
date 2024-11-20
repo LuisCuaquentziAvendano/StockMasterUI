@@ -87,3 +87,28 @@ nav {
     padding: 0 2rem;
     height: 100%;
 }
+
+.notification {
+    background-color: var(--BLACK_LIGHT);
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+  }
+
+  .notification button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .notification button:hover {
+    color: #ff6b6b;
+  }
