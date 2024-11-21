@@ -13,8 +13,8 @@ function generateExampleDataset() {
 function createInventoryFields() {
     request(
         () => {
-            setPermission();
             createProducts();
+            setPermission();
         },
         'PUT',
         'inventories/createField',
@@ -38,15 +38,6 @@ function createInventoryFields() {
     );
 }
 
-function setPermission() {
-    request(
-        () => {},
-        'PUT',
-        'inventories/modifyPermission',
-        { email: 'jane.smith@gmail.com', role: 'query' }
-    );
-}
-
 function createProducts() {
     DATA.forEach(product => {
         const body = new FormData();
@@ -61,4 +52,13 @@ function createProducts() {
             true
         );
     });
+}
+
+function setPermission() {
+    request(
+        () => {},
+        'PUT',
+        'inventories/modifyPermission',
+        { email: 'jane.smith@gmail.com', role: 'query' }
+    );
 }

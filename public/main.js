@@ -59,6 +59,7 @@ function renderNavbar() {
             <h2>Stock Master</h2>
             <a href="/inventories">Inventories</a>
             <a href="/profile">Profile</a>
+            <a href="/">Logout</a>
         </div>
     `;
 }

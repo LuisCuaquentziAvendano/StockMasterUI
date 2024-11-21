@@ -62,3 +62,7 @@ function setVisibleElements() {
             element.classList.remove('hide');
         });
 }
+
+function authGoogle() {
+    window.location.href = `${API_URL}users/googleAuth`;
+}

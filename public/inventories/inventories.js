@@ -1,3 +1,8 @@
+if (!localStorage.getItem('authorization')) {
+    const authorization = window.location.href.split('/').pop().split('=').pop();
+    localStorage.setItem('authorization', `Bearer ${authorization}`);
+    window.location.href = '/inventories';
+}
 getInventories();
 
 function getInventories() {

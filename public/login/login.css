@@ -21,3 +21,8 @@ input, button {
     height: 2.5rem;
     padding: 0.5rem;
 }
+
+.google-button {
+    background-color: var(--YELLOW);
+    color: black;
+}
