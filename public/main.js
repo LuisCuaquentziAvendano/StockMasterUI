@@ -1,4 +1,5 @@
-const API_URL = 'https://stockmaster-xvke.onrender.com/api/';
+const API_URL = 'https://stockmaster-xvke.onrender.com/api/'; 
+const socket = io.connect('https://stockmaster-xvke.onrender.com/');
 const HTTP_STATUS = {
     401: 'Unauthorized',
     403: 'Forbidden',
@@ -63,3 +64,41 @@ function renderNavbar() {
         </div>
     `;
 }
+
+socket.on('connect', () => {
+    console.log('Connected to server:', socket.id);
+
+    const token = localStorage.getItem('authorization').replace('Bearer ', '');
+
+    if (token) {
+        socket.emit('joinRoom', token); 
+    }
+
+    socket.on('roomJoined', (data) => {
+        console.log(`Successfully joined room: ${data.room}`);
+    });
+
+    socket.on('largeSaleNotification', (data) => {
+        console.log("Message received: ", data.message);
+    
+        const notificationContainer = document.getElementById('notification-container');
+    
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+
+        const message = document.createElement('span');
+        message.innerText = data.message;
+    
+        const closeButton = document.createElement('button');
+        closeButton.innerText = '×'; 
+        closeButton.onclick = () => {
+            notificationContainer.removeChild(notification);
+        };
+    
+        notification.appendChild(message);
+        notification.appendChild(closeButton);
+        notificationContainer.appendChild(notification);
+    });
+});
+
+
