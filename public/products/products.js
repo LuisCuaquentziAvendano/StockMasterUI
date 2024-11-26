@@ -86,8 +86,7 @@ async function renderProduct(item={}, canEdit, buttonText, sectionId) {
                     canEdit ? /*html*/`<button data-editing="false"
                                                 id="button-${sectionId}"
                                                 class="button"
-                                                onclick="startEndEdition
-                                            ('${sectionId}', 'button-${sectionId}')">${buttonText}</button>`
+                                                onclick="startEndEdition('${sectionId}', 'button-${sectionId}')">${buttonText}</button>`
                     : ''
                 }
                 ${
@@ -175,9 +174,9 @@ function renderImage(productF={}, field, sectionId) {
                     <input class="input-file"
                             type="file"
                             accept="image/*"
-                            id="${sectionId}-${field}"
+                            id="${sectionId}-upload-${field}"
                             disabled
-                            onchange="updateField('${sectionId}-${field}', '${sectionId}', '${field}', 'image')">`
+                            onchange="updateField('${sectionId}-upload-${field}', '${sectionId}', '${field}', 'image')">`
                 : ''
             }
         </div>`;
