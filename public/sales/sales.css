@@ -1,0 +1,49 @@
+/* DEFAULT ELEMENTS */
+main {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+}
+
+input {
+    width: 15rem;
+    padding: 0.5rem;
+}
+
+/* ID */
+
+/* CLASSES*/
+.sale-container {
+    background-color: var(--BLACK_LIGHT);
+    padding: 1rem;
+    width: 20rem;
+    gap: 1rem;
+    border: 1px var(--GRAY) solid;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+.cancel-action {
+    background-color: var(--RED_DARK);
+}
+
+.disabled-action {
+    background-color: #bd383999;
+    color: #ffffff99
+}
+
+.disabled-action:hover {
+    cursor: not-allowed;
+}
+
+.sale-button a {
+    text-decoration: none;
+}

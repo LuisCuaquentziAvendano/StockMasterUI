@@ -1,0 +1,31 @@
+/* DEFAULT ELEMENTS */
+main {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+}
+
+input {
+    width: 6rem;
+    padding: 0.5rem;
+}
+
+select {
+    height: 2.5rem;
+}
+
+/* ID */
+
+/* CLASSES*/
+.remove-button {
+    width: 8.5rem;
+    height: 1.5rem;
+}
+
+.cancel-action {
+    background-color: var(--RED_DARK);
+}

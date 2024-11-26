@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Master</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="salesrecords.css">
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <main class="flex-vertical">
+        <h1>Sales Records</h1>
+        <div class="flex-vertical" style="gap: 1rem;" id="sales-records"></div>
+        <button class="create-button" onclick="createSaleRecord()">Create sale record</button>
+        <div class="flex-vertical" style="gap: 1rem;" id="create-record"></div>
+        <div id="notification-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"></div>
+    </main>
+    <script src="./../main.js"></script>
+    <script src="salesrecords.js"></script>
+</body>
+</html>

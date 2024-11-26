@@ -94,3 +94,12 @@ button {
     background-color: var(--YELLOW);
     color: black;
 }
+
+.sale-button {
+    width: 12rem;
+    height: 3rem;
+}
+
+.sale-button a{
+    text-decoration: none;
+}
