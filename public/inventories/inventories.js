@@ -24,6 +24,7 @@ function renderInventories(inventories) {
             <p><b>Role:</b> ${item.role}</p>
             <button class="inventory-button" onclick="goToInventory('${item.inventory}')">Go to inventory</button>
             <button class="inventory-button" onclick="goToProducts('${item.inventory}')">Go to products</button>
+            <button class="inventory-button" onclick="goToSales('${item.inventory}')">Go to sales</button>
         </div>
     `).join('');
 }
@@ -43,6 +44,11 @@ function goToProducts(inventoryId) {
         'GET',
         'inventories/getInventory'
     );
+}
+
+function goToSales(inventoryId) {
+    localStorage.setItem('inventory', inventoryId);
+    window.location.href = '/sales';
 }
 
 function createInventory() {

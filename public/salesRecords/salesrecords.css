@@ -1,0 +1,58 @@
+/* DEFAULT ELEMENTS */
+main {
+    padding: 2rem;
+    gap: 2rem;
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+}
+
+input {
+    width: 15rem;
+    padding: 0.5rem;
+}
+
+/* ID */
+
+/* CLASSES*/
+.create-button a {
+    text-decoration: none;
+}
+
+.select-button {
+    width: 7rem;
+    height: 2rem;
+}
+
+.cancel-button {
+    width: 14rem;
+    height: 2rem;
+}
+
+.cancel-action {
+    background-color: var(--RED_DARK);
+}
+
+.disabled-action {
+    background-color: #22863699;
+    color: #ffffff99
+}
+
+.disabled-action:hover {
+    cursor: not-allowed;
+}
+
+.sale-record {
+    background-color: var(--BLACK_LIGHT);
+    padding: 1rem;
+    width: 20rem;
+    border: 1px var(--GRAY) solid;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    flex-wrap: wrap;
+}

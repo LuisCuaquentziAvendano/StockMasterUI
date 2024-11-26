@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Master</title>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <link rel="stylesheet" href="./../main.css">
+    <link rel="stylesheet" href="sale.css">
+</head>
+<body>
+    <nav id="navbar"></nav>
+    <main class="flex-vertical">
+        <h1>Sale Creation</h1>
+        <div class="flex-horizontal" style="gap: 2rem;">
+            <b>Products:</b>
+            <select id="product-select"></select>
+            <b>Amount:</b>
+            <input id="product-quantity" type="number" min="1" placeholder="Input">
+            <button id="product-add">Add product</button>
+        </div>
+
+        <div id="cart" class="flex-vertical" style="gap: 1rem;"></div>
+        <input id="customer-input" type="email" placeholder="Customer" style="width: 15rem;">
+        <div class="flex-horizontal create-sale">
+            <button onclick="createSale()">Create test sale</button>
+        </div>
+        <div id="notification-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;"></div>
+    </main>
+    <script src="./../main.js"></script>
+    <script src="sale.js"></script>
+</body>
+</html>
